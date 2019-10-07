@@ -1,41 +1,41 @@
 const hashMap = require('./hashMaps');
-
+const hashMapTwo = require('./hashMapSeparateChaining');
 
 function main(){
-  // const lor = new hashMap;
-  // hashMap.MAX_LOAD_RATIO = 0.5;
-  // hashMap.SIZE_RATIO = 3;
-  // lor.set("Hobbit", "Bilbo");
-  // lor.set("Hobbit", "Frodo");
-  // lor.set("Wizard", "Gandolf");
-  // lor.set("Human", "Aragon");
-  // lor.set("Elf", "Legolas");
-  // lor.set("Maiar", "The Necromancer");
-  // lor.set("Maiar", "Sauron");
-  // lor.set("RingBearer", "Gollum");
-  // lor.set("LadyOfLight", "Galadriel");
-  // lor.set("HalfElven", "Arwen");
-  // lor.set("Ent", "Treebeard");
+  const lor = new hashMapTwo;
+  hashMapTwo.MAX_LOAD_RATIO = 0.5;
+  hashMapTwo.SIZE_RATIO = 3;
+  lor.set("Hobbit", "Bilbo");
+  lor.set("Hobbit", "Frodo");
+  lor.set("Wizard", "Gandolf");
+  lor.set("Human", "Aragon");
+  lor.set("Elf", "Legolas");
+  lor.set("Maiar", "The Necromancer");
+  lor.set("Maiar", "Sauron");
+  lor.set("RingBearer", "Gollum");
+  lor.set("LadyOfLight", "Galadriel");
+  lor.set("HalfElven", "Arwen");
+  lor.set("Ent", "Treebeard");
 
-  // console.log(lor._hashTable);
+  console.log(lor._hashTable);
 
-    let str1 = 'Hello World.';
-    let str2 = 'Hello World.';
-    let map1 = new hashMap();
-    map1.set(str1,10);
-    map1.set(str2,20);
-    let map2 = new hashMap();
-    let str3 = str1;
-    let str4 = str2;
-    map2.set(str3,20);
-    map2.set(str4,10);
+    // let str1 = 'Hello World.';
+    // let str2 = 'Hello World.';
+    // let map1 = new hashMap();
+    // map1.set(str1,10);
+    // map1.set(str2,20);
+    // let map2 = new hashMap();
+    // let str3 = str1;
+    // let str4 = str2;
+    // map2.set(str3,20);
+    // map2.set(str4,10);
 
-    console.log(map1.get(str1));
-    console.log(map2.get(str3));
+    // console.log(map1.get(str1));
+    // console.log(map2.get(str3));
 
 
 }
-//main();
+main();
 
 //1) Maiar and Hobbit have been replaced with
 // with the latest values assigned to them.
