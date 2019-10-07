@@ -1,5 +1,5 @@
 const hashMap = require('./hashMaps');
-const hashMapTwo = require('./hashMapSeparateChaining');
+const hashMapTwo = require('./hashMaps2');
 
 function main(){
   const lor = new hashMapTwo;
@@ -17,6 +17,7 @@ function main(){
   lor.set("HalfElven", "Arwen");
   lor.set("Ent", "Treebeard");
 
+  console.log(lor);
   console.log(lor._hashTable);
 
     // let str1 = 'Hello World.';
@@ -111,4 +112,4 @@ function palindrome(str){
     return result;
   }
 
-console.log(anagramGroup(['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race']));
+//console.log(anagramGroup(['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race']));
