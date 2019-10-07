@@ -61,7 +61,7 @@ function duplicates(str){
   return result
 }
 //console.log(duplicates('google'));//gole
-console.log(duplicates('google all that you think can think of'));
+//console.log(duplicates('google all that you think can think of'));
 
 //input is a string
 //output is boolean
@@ -70,7 +70,7 @@ function palindrome(str){
   const isPalindrome = new Map();
   hashMap.MAX_LOAD_RATIO = 0.5;
   hashMap.SIZE_RATIO = 3;
-  
+
   for (let i=0; i<str.length; i++){
       if (isPalindrome.has(str[i])){
         isPalindrome.set(str[i], isPalindrome.get(str[i]) + 1);
@@ -91,6 +91,24 @@ function palindrome(str){
     return t;
   }
 
-  console.log(palindrome("acecarr"))
+  //console.log(palindrome("acecarr"))
 
+  function anagramGroup(arr) {
+    const anagram = new Map()
+    for (let i=0; i< arr.length; i++){
+      let currentWord = arr[i].split('');
+      currentWord = currentWord.sort().join('')
+      if (anagram.has(currentWord)){
+        anagram.set(currentWord, [...anagram.get(currentWord), arr[i]])
+      }else{
+        anagram.set(currentWord, [arr[i]])
+      }
+    }
+    let result = []
+    for (let [key, value] of anagram){
+      result.push(value);
+    }
+    return result;
+  }
 
+console.log(anagramGroup(['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race']));
