@@ -53,7 +53,7 @@ function duplicates(str){
   let result = '';
 
   for (let i=0; i<str.length; i++){
-    if (lor.get(str.charAt(i))===null){
+    if (!lor.has(str.charAt(i))){
       result += str[i]
     }
     lor.set(str.charAt(i), str[i])
@@ -62,3 +62,35 @@ function duplicates(str){
 }
 //console.log(duplicates('google'));//gole
 console.log(duplicates('google all that you think can think of'));
+
+//input is a string
+//output is boolean
+
+function palindrome(str){
+  const isPalindrome = new Map();
+  hashMap.MAX_LOAD_RATIO = 0.5;
+  hashMap.SIZE_RATIO = 3;
+  
+  for (let i=0; i<str.length; i++){
+      if (isPalindrome.has(str[i])){
+        isPalindrome.set(str[i], isPalindrome.get(str[i]) + 1);
+      } else {
+        isPalindrome.set(str[i], 1);
+      }
+    }
+    let f = false;
+    let t = true;
+    for (let [key, value] of isPalindrome){
+      if (value % 2 === 1){
+        if (f === true){
+          t = false
+        }
+        else f = true;
+      }
+    }
+    return t;
+  }
+
+  console.log(palindrome("acecarr"))
+
+

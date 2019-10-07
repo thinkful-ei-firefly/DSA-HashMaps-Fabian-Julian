@@ -44,6 +44,15 @@ class HashMap {
       this._deleted++;
   }
 
+  has(key){
+    const index = this._findSlot(key);
+      if (this._hashTable[index] === undefined) {
+          //throw new Error('Key error');
+          return false;
+      }
+      return true;
+  }
+
   _findSlot(key) {
       const hash = HashMap._hashString(key);
       const start = hash % this._capacity;
