@@ -18,7 +18,7 @@ function main(){
   // lor.set("Ent", "Treebeard");
 
   // console.log(lor._hashTable);
-  
+
     let str1 = 'Hello World.';
     let str2 = 'Hello World.';
     let map1 = new hashMap();
@@ -35,7 +35,7 @@ function main(){
 
 
 }
-main();
+//main();
 
 //1) Maiar and Hobbit have been replaced with
 // with the latest values assigned to them.
@@ -45,3 +45,20 @@ main();
 //2) first console log is 20. The second console log is 10.
 // we are re-assigning str 1 and str 3 because Hello Wold is the only key.
 
+
+function duplicates(str){
+  const lor = new hashMap;
+  hashMap.MAX_LOAD_RATIO = 0.5;
+  hashMap.SIZE_RATIO = 3;
+  let result = '';
+
+  for (let i=0; i<str.length; i++){
+    if (lor.get(str.charAt(i))===null){
+      result += str[i]
+    }
+    lor.set(str.charAt(i), str[i])
+  }
+  return result
+}
+//console.log(duplicates('google'));//gole
+console.log(duplicates('google all that you think can think of'));
